@@ -7,6 +7,8 @@ import telebot
 from telebot import types
 from dotenv import load_dotenv
 import os
+
+
 def func(url):
     sleep(3)
     response = requests.get(url).text
@@ -17,6 +19,7 @@ def func(url):
         result_end = elem.text.strip()
         joke.append(result_end)
     return joke
+
 
 load_dotenv()
 Apy_key = os.getenv('Token')
